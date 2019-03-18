@@ -4,7 +4,7 @@ let classMap: Map<string, number> = new Map<string, number>();
 window.onload = () => {
   // Create Open File Button
   const button = document.createElement("button");
-  button.innerText = "Browse";
+  button.innerText = "Browse Files";
   button.onclick = () => {
     document.getElementById("upload").click();
   };
