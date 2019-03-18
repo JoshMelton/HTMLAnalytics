@@ -14,7 +14,9 @@ Generates various analytic's via Abstract Syntax Tree (AST) exploral of HTML fil
 
 ## Manual Build Process
 To compile in one step:
+
 `tsc filename.ts && browserify filename.js -o bundle.js` where `filename` is the analyser you want to build
+
 navigate to `index.html` in your browser to test out the analyser
 
 ## Links & Resources
