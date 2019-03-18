@@ -2907,9 +2907,60 @@ function simpleEnd(buf) {
   return buf && buf.length ? this.write(buf) : '';
 }
 },{"safe-buffer":6}],8:[function(require,module,exports){
+window.onload = function () {
+    // Create Open File Button
+    var button = document.createElement("button");
+    button.innerText = "TEST";
+    button.onclick = function () {
+        document.getElementById("upload").click();
+    };
+    document.body.appendChild(button);
+    document.getElementById("upload").onchange = function (event) {
+        openFile(event);
+    };
+};
+function openFile(event) {
+    var input = event.target;
+    var reader = new FileReader();
+    reader.onload = function () {
+        classCount = 0;
+        var text = reader.result;
+        var node = document.getElementById("output");
+        node.innerText = String(text);
+        parser.write(text);
+        parser.end();
+        console.log("class count: " + classCount);
+    };
+    reader.readAsText(input.files[0]);
+}
 var htmlparser = require("htmlparser2");
 var tab = "";
 var tabSize = " ";
+var classCount = 0;
+var parser = new htmlparser.Parser({
+    onopentag: function (tag, attribs) {
+        console.log(tab + "open - " + tag);
+        if (attribs !== undefined) {
+            if (attribs["class"] !== undefined) {
+                classCount += attribs["class"].split(" ").length;
+            }
+        }
+        tab += tabSize;
+    },
+    ontext: function (text) {
+        tab += tabSize;
+        if (notEmpty(text)) {
+            console.log(tab + text);
+        }
+        tab = tab.substring(0, tab.length - tabSize.length);
+    },
+    onclosetag: function (tag) {
+        tab = tab.substring(0, tab.length - tabSize.length);
+        console.log(tab + "close - " + tag);
+    }
+}, {
+    decodeEntities: true
+});
 function notEmpty(text) {
     while (text.replace(" ", "") !== text) {
         text = text.replace(" ", "");
@@ -2927,61 +2978,6 @@ function notEmpty(text) {
         return true;
     }
     return false;
-}
-var parser = new htmlparser.Parser({
-    onopentag: function (tag, attribs) {
-        console.log(tab + "open - " + tag);
-        tab += tabSize;
-    },
-    ontext: function (text) {
-        tab += tabSize;
-        if (notEmpty(text)) {
-            console.log(tab + text);
-        }
-        tab = tab.substring(0, tab.length - tabSize.length);
-    },
-    onclosetag: function (tag) {
-        tab = tab.substring(0, tab.length - tabSize.length);
-        console.log(tab + "close - " + tag);
-    }
-}, {
-    decodeEntities: true
-});
-/*
-let html = "<html>";
-html += "<head>";
-html += "<script type='text/javascript'>var variable1 = 'value1';</ script>";
-html += "</head>";
-html += "<body>";
-html += "<p>paragraph 1</p>";
-html += "<p>paragraph 2</p>";
-html += "</body>";
-html += "</html>";
-parser.write(html);
-*/
-window.onload = function () {
-    // Create Open File Button
-    var button = document.createElement("button");
-    button.innerText = "TEST";
-    button.onclick = function () {
-        document.getElementById("upload").click();
-    };
-    document.body.appendChild(button);
-    document.getElementById("upload").onchange = function (event) {
-        openFile(event);
-    };
-};
-function openFile(event) {
-    var input = event.target;
-    var reader = new FileReader();
-    reader.onload = function () {
-        var text = reader.result;
-        var node = document.getElementById("output");
-        node.innerText = String(text);
-        parser.write(text);
-        parser.end();
-    };
-    reader.readAsText(input.files[0]);
 }
 
 },{"htmlparser2":36}],9:[function(require,module,exports){
