@@ -1,0 +1,10 @@
+{
+	"recommendations": [
+    "eg2.tslint",
+    "coenraads.bracket-pair-colorizer",
+    "aaron-bond.better-comments",
+    "joelday.docthis",
+    "ibm.output-colorizer",
+    "eamodio.gitlens",
+	],
+}
