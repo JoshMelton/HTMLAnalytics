@@ -38,7 +38,7 @@
     }
   },
   "lint-staged": {
-    "*.{js,ts}": [
+    "*.{ts}": [
       "tslint --fix --project .",
       "git add"
     ]
