@@ -13,7 +13,9 @@ Generates various analytic's via Abstract Syntax Tree (AST) exploral of HTML fil
 `browserify input.js -o output.js`, allows us to use node.js required packages client side
 
 ## Manual Build Process
-`tsc index.ts && browserify index.js -o bundle.js` to compile in one step
+To compile in one step:
+`tsc filename.ts && browserify filename.js -o bundle.js` where `filename` is the analyser you want to build
+navigate to `index.html` in your browser to test out the analyser
 
 ## Links & Resources
 https://astexplorer.net/
