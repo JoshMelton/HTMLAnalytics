@@ -31,7 +31,13 @@ HTML - Class Counter:
 
 `tsc HTMLParsing/classCounter.ts && browserify HTMLParsing/classCounter.js -o bundle.js`
 
-Navigate to `index.html` in your browser to test out the analyser's 
+## Easy Build Process
+`npm run css-selector-explorer`
+
+`npm run html-class-counter`
+
+## How to view analysis:
+Navigate to `index.html` in your browser to test out the analyser's (currently all stats are console.log's)
 
 ## Links & Resources:
 https://astexplorer.net/
