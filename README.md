@@ -25,11 +25,11 @@ where `filename` is the analyser you want to build
 #### Example's:
  CSS - Selector Explorer
  
-`tsc CSSParser/classCounter.ts && browserify CSSParser/classCounter.js -o bundle.js`
+`tsc CSSParsing/selectorExplorer.ts && browserify CSSParsing/selectorExplorer.js -o bundle.js`
 
 HTML - Class Counter:
 
-`tsc HTMLParser/selectorExplorer.ts && browserify HTMLParser/selectorExplorer.js -o bundle.js`
+`tsc HTMLParsing/classCounter.ts && browserify HTMLParsing/classCounter.js -o bundle.js`
 
 Navigate to `index.html` in your browser to test out the analyser's 
 
