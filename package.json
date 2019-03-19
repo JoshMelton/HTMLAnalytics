@@ -4,6 +4,7 @@
   "description": "html analytic tools",
   "main": "index.ts",
   "dependencies": {
+    "cssom": "^0.3.6",
     "htmlparser2": "^3.10.1",
     "lint-staged": "^8.1.5",
     "tslint": "^5.14.0",

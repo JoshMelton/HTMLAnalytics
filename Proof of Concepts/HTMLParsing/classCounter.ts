@@ -1,4 +1,4 @@
-let htmlparser = require("htmlparser2");
+let htmlParser = require("htmlparser2");
 let classMap: Map<string, number> = new Map<string, number>();
 
 window.onload = () => {
@@ -11,28 +11,28 @@ window.onload = () => {
   document.body.appendChild(button);
 
   document.getElementById("upload").onchange = (event) => {
-    parseFile(event);
+    parseHTMLFile(event);
   };
 };
 
-function parseFile(event: any) {
+function parseHTMLFile(event: any) {
   const input = event.target;
   const reader = new FileReader();
   reader.onload = () => {
     classMap = new Map<string, number>();
     const text = reader.result;
-    parseFileText(String(text));
+    parseHTMLFileText(String(text));
   };
   reader.readAsText(input.files[0]);
 }
 
-function parseFileText(fileText: string) {
-  parser.write(fileText);
-  parser.end();
-  analyzeClasses();
+function parseHTMLFileText(fileText: string) {
+  htmlParser.write(fileText);
+  htmlParser.end();
+  analyzeHTMLClasses();
 }
 
-function analyzeClasses() {
+function analyzeHTMLClasses() {
   let classCount: number = 0;
   classMap.forEach((value: number, key: string) => {
     console.log("count: " + ("0" + classMap.get(key)).slice(-2) + " | " + key);
@@ -41,7 +41,7 @@ function analyzeClasses() {
   console.log("total class count: " + classCount);
 }
 
-let parser = new htmlparser.Parser({
+htmlParser = new htmlParser.Parser({
   onopentag(tag: string, attribs: any) {
     if (attribs !== undefined) {
       if (attribs.class !== undefined) {
