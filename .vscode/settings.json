@@ -3,4 +3,13 @@
   "files.autoSave": "off",
   "tslint.enable": true,
   "tslint.autoFixOnSave": true,
+  "files.exclude": {
+    "README.md": true,
+    "node_modules": true,
+    "tslint.json": true,
+    "tsconfig.json": true,
+    "package-lock.json": true,
+    "**/*.js": true,
+    "LICENSE": true,
+  },
 }
