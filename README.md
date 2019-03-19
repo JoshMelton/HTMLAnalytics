@@ -13,12 +13,15 @@ Generates various analytic's via Abstract Syntax Tree (AST) exploral of HTML fil
 `browserify input.js -o output.js`, allows us to use node.js required packages client side
 
 ## Manual Individual Build Process
-####To compile in one step:
+#### To compile in one step:
 
 `tsc filename.ts && browserify filename.js -o bundle.js` where `filename` is the analyser you want to build
 
+#### Example's for HTMLAnalytics/Proof of Concepts/*
 `tsc classCounter.ts && browserify classCounter.js -o bundle.js` - HTML - Class Counter
+
 `tsc selectorExplorer.ts && browserify selectorExplorer.js -o bundle.js` - CSS - Selector Explorer
+
 Navigate to `index.html` in your browser to test out the analyser's 
 
 ## Links & Resources
