@@ -25,10 +25,17 @@ function parseCSSFile(event: any) {
 }
 
 function parseCSSFileText(fileText: string) {
-  console.log(cssParser.parse(fileText));
+  console.log(cssParser.parse(fileText).cssRules.filter(filterSelectorText));
   analyzeCSSClasses();
 }
 
 function analyzeCSSClasses() {
   console.log("--------------");
+}
+
+function filterSelectorText(object: any) {
+  if (object.selectorText !== undefined) {
+    return true;
+  }
+  return false;
 }
