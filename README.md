@@ -23,7 +23,7 @@ where `folder` is the language of analyser you want to build
 where `filename` is the analyser you want to build
 
 #### Example's:
- CSS - Selector Explorer
+ CSS - Selector Explorer:
  
 `tsc CSSParsing/selectorExplorer.ts && browserify CSSParsing/selectorExplorer.js -o bundle.js`
 
@@ -31,10 +31,16 @@ HTML - Class Counter:
 
 `tsc HTMLParsing/classCounter.ts && browserify HTMLParsing/classCounter.js -o bundle.js`
 
+HTML - Style Counter:
+
+`tsc HTMLParsing/styleCounter.ts && browserify HTMLParsing/styleCounter.js -o bundle.js`
+
 ## Easy Build Process
 `npm run css-selector-explorer`
 
 `npm run html-class-counter`
+
+`npm run html-style-counter`
 
 ## How to view analysis:
 Navigate to `index.html` in your browser to test out the analyser's (currently all stats are console.log's)
