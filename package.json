@@ -4,8 +4,9 @@
   "description": "html analytic tools",
   "main": "index.ts",
   "scripts": {
-    "css-selector-explorer": "tsc Proof-of-Concepts/CSSParsing/selectorExplorer.ts && browserify Proof-of-Concepts/CSSParsing/selectorExplorer.js -o bundle.js",
-    "html-class-counter": "tsc Proof-of-Concepts/HTMLParsing/classCounter.ts && browserify Proof-of-Concepts/HTMLParsing/classCounter.js -o bundle.js"
+    "css-selector-explorer": "tsc Proof-of-Concepts/CSSParsing/selectorExplorer.ts && browserify Proof-of-Concepts/CSSParsing/selectorExplorer.js -o Proof-of-Concepts/bundle.js",
+    "html-class-counter": "tsc Proof-of-Concepts/HTMLParsing/classCounter.ts && browserify Proof-of-Concepts/HTMLParsing/classCounter.js -o Proof-of-Concepts/bundle.js",
+    "style-class-counter": "tsc Proof-of-Concepts/HTMLParsing/styleCounter.ts && browserify Proof-of-Concepts/HTMLParsing/styleCounter.js -o Proof-of-Concepts/bundle.js"
   },
   "dependencies": {
     "cssom": "^0.3.6",

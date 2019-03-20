@@ -1,4 +1,4 @@
-let cssParser = require("cssom");
+const cssParser = require("cssom");
 
 window.onload = () => {
   // Create Open File Button
@@ -10,26 +10,26 @@ window.onload = () => {
   document.body.appendChild(button);
 
   document.getElementById("upload").onchange = (event) => {
-    parseCSSFile(event);
+    parseFile(event);
   };
 };
 
-function parseCSSFile(event: any) {
+function parseFile(event: any) {
   const input = event.target;
   const reader = new FileReader();
   reader.onload = () => {
     const text = reader.result;
-    parseCSSFileText(String(text));
+    parseFileText(String(text));
   };
   reader.readAsText(input.files[0]);
 }
 
-function parseCSSFileText(fileText: string) {
+function parseFileText(fileText: string) {
   console.log(cssParser.parse(fileText).cssRules.filter(filterSelectorText));
-  analyzeCSSClasses();
+  analyzeFile();
 }
 
-function analyzeCSSClasses() {
+function analyzeFile() {
   console.log("--------------");
 }
 
@@ -39,3 +39,4 @@ function filterSelectorText(object: any) {
   }
   return false;
 }
+export {};
