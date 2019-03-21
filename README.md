@@ -37,7 +37,7 @@ HTML - Style Counter:
 
 HTML - ID Analyser
 
-`tsc Proof-of-Concepts/HTMLParsing/idAnalyser.ts && browserify Proof-of-Concepts/HTMLParsing/idAnalyser.js -o Proof-of-Concepts/bundle.js`
+`tsc HTMLParsing/idAnalyser.ts && browserify HTMLParsing/idAnalyser.js -o bundle.js`
 
 ## Easy Build Process
 `npm run css-selector-explorer`
