@@ -35,16 +35,23 @@ function parseFileText(fileText: string) {
 function analyzeFile() {
   let idCount: number = 0;
   idMap.forEach((value: number, key: string) => {
-    if (idMap.get(key) > 1) {
-      console.log("count: " + ("0" + idMap.get(key)).slice(-2) + " | " + key + " - WARNING");
-    } else {
-      console.log("count: " + ("0" + idMap.get(key)).slice(-2) + " | " + key);
-    }
+    const keyWarnings = appendWarnings(key);
+    console.log("count: " + ("0" + idMap.get(key)).slice(-2) + " | " + keyWarnings);
     idCount += idMap.get(key);
   });
   console.log("total id count: " + idCount);
 }
-
+function appendWarnings(id: string): string {
+  // ID's cannot start with a number
+  let warnings = id;
+  if ("0123456789".indexOf(id.charAt(0)) !== -1) {
+    warnings += " - (id's should not start with number)";
+  }
+  if (idMap.get(id) > 1) {
+    warnings +=  " - (id's should be unique)";
+  }
+  return warnings;
+}
 htmlParser = new htmlParser.Parser({
   onopentag(tag: string, attribs: any) {
     if (attribs !== undefined) {
