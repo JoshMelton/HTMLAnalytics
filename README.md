@@ -35,12 +35,18 @@ HTML - Style Counter:
 
 `tsc HTMLParsing/styleCounter.ts && browserify HTMLParsing/styleCounter.js -o bundle.js`
 
+HTML - ID Analyser
+
+`tsc Proof-of-Concepts/HTMLParsing/idAnalyser.ts && browserify Proof-of-Concepts/HTMLParsing/idAnalyser.js -o Proof-of-Concepts/bundle.js`
+
 ## Easy Build Process
 `npm run css-selector-explorer`
 
 `npm run html-class-counter`
 
 `npm run html-style-counter`
+
+`npm run html-id-analyser`
 
 ## How to view analysis:
 Navigate to `index.html` in your browser to test out the analyser's (currently all stats are console.log's)
