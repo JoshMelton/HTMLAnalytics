@@ -23,14 +23,25 @@ function parseFile(event: any) {
   };
   reader.readAsText(input.files[0]);
 }
-
+let importantCount = 0;
 function parseFileText(fileText: string) {
-  console.log(cssParser.parse(fileText).cssRules.filter(filterSelectorText));
+  importantCount = 0;
+  cssParser.parse(fileText).cssRules.filter(filterSelectorText).forEach((element: any) => {
+    console.log(element.selectorText);
+    for (const style of element.style) {
+      if (element.style._importants[style] === "important") {
+        console.log("\t" + style + ": " + element.style[style] + " !important");
+        importantCount += 1;
+      } else {
+        console.log("\t" + style + ": " + element.style[style]);
+      }
+    }
+  });
   analyzeFile();
 }
 
 function analyzeFile() {
-  console.log("--------------");
+  console.log("Number of !important's found: " + importantCount);
 }
 
 function filterSelectorText(object: any) {

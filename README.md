@@ -23,9 +23,9 @@ where `folder` is the language of analyser you want to build
 where `filename` is the analyser you want to build
 
 #### Example's:
- CSS - Selector Explorer:
+ CSS - Important Counter:
  
-`tsc CSSParsing/selectorExplorer.ts && browserify CSSParsing/selectorExplorer.js -o bundle.js`
+`tsc CSSParsing/importantCounter.ts && browserify CSSParsing/importantCounter.js -o bundle.js`
 
 HTML - Class Counter:
 
@@ -40,7 +40,7 @@ HTML - ID Analyser
 `tsc HTMLParsing/idAnalyser.ts && browserify HTMLParsing/idAnalyser.js -o bundle.js`
 
 ## Easy Build Process
-`npm run css-selector-explorer`
+`npm run css-important-counter`
 
 `npm run html-class-counter`
 
