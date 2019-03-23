@@ -4,10 +4,11 @@
   "description": "html analytic tools",
   "main": "index.ts",
   "scripts": {
-    "css-important-counter": "tsc Proof-of-Concepts/CSSParsing/importantCounter.ts && browserify Proof-of-Concepts/CSSParsing/importantCounter.js -o Proof-of-Concepts/bundle.js",
-    "html-class-counter": "tsc Proof-of-Concepts/HTMLParsing/classCounter.ts && browserify Proof-of-Concepts/HTMLParsing/classCounter.js -o Proof-of-Concepts/bundle.js",
-    "html-id-analyser": "tsc Proof-of-Concepts/HTMLParsing/idAnalyser.ts && browserify Proof-of-Concepts/HTMLParsing/idAnalyser.js -o Proof-of-Concepts/bundle.js",
-    "html-style-class-counter": "tsc Proof-of-Concepts/HTMLParsing/styleCounter.ts && browserify Proof-of-Concepts/HTMLParsing/styleCounter.js -o Proof-of-Concepts/bundle.js"
+    "css-important-counter": "tsc Proof-of-Concepts/File-Parsing/CSSParsing/importantCounter.ts && browserify Proof-of-Concepts/File-Parsing/SSParsing/importantCounter.js -o Proof-of-Concepts/File-Parsing/bundle.js",
+    "html-class-counter": "tsc Proof-of-Concepts/File-Parsing/HTMLParsing/classCounter.ts && browserify Proof-of-Concepts/File-Parsing/HTMLParsing/classCounter.js -o Proof-of-Concepts/File-Parsing/bundle.js",
+    "html-id-analyser": "tsc Proof-of-Concepts/File-Parsing/HTMLParsing/idAnalyser.ts && browserify Proof-of-Concepts/File-Parsing/HTMLParsing/idAnalyser.js -o Proof-of-Concepts/File-Parsing/bundle.js",
+    "html-style-class-counter": "tsc Proof-of-Concepts/File-Parsing/HTMLParsing/styleCounter.ts && browserify Proof-of-Concepts/File-Parsing/HTMLParsing/styleCounter.js -o Proof-of-Concepts/File-Parsing/bundle.js",
+    "directory-parser": "tsc Proof-of-Concepts/DirectoryParsing/directoryParser.ts && browserify Proof-of-Concepts/DirectoryParsing/directoryParser.js -o Proof-of-Concepts/DirectoryParsing/bundle.js"
   },
   "dependencies": {
     "cssom": "^0.3.6",

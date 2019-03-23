@@ -13,7 +13,7 @@ Generates various analytic's via Abstract Syntax Tree (AST) exploral of HTML fil
 `browserify input.js -o output.js`, allows us to use node.js required packages client side
 
 ## Manual Individual Build Process:
-### In HTMLAnalytics/Proof of Concepts/
+### In HTMLAnalytics/Proof of Concepts/File-Parsing
 #### To compile in one step:
 
 `tsc folder/filename.ts && browserify folder/filename.js -o bundle.js`
@@ -39,6 +39,12 @@ HTML - ID Analyser
 
 `tsc HTMLParsing/idAnalyser.ts && browserify HTMLParsing/idAnalyser.js -o bundle.js`
 
+### In HTMLAnalytics/Proof of Concepts/File-Parsing
+#### To compile in one step:
+Directory Parser
+
+`tsc DirectoryParsing/directoryParser.ts && browserify DirectoryParsing/directoryParser.js -o bundle.js`
+
 ## Easy Build Process
 `npm run css-important-counter`
 
@@ -47,6 +53,8 @@ HTML - ID Analyser
 `npm run html-style-counter`
 
 `npm run html-id-analyser`
+
+`npm run directory-parser`
 
 ## How to view analysis:
 Navigate to `index.html` in your browser to test out the analyser's (currently all stats are console.log's)
