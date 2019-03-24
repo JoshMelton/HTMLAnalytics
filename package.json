@@ -4,11 +4,11 @@
   "description": "html analytic tools",
   "main": "index.ts",
   "scripts": {
-    "css-important-counter": "tsc Proof-of-Concepts/shared/fileValidator.ts && tsc Proof-of-Concepts/File-Parsing/CSS/importantCounter.ts && browserify Proof-of-Concepts/shared/fileValidator.js Proof-of-Concepts/File-Parsing/CSS/importantCounter.js -o Proof-of-Concepts/File-Parsing/bundle.js",
-    "html-class-counter": "tsc Proof-of-Concepts/shared/fileValidator.ts && tsc Proof-of-Concepts/File-Parsing/HTML/classCounter.ts && browserify Proof-of-Concepts/shared/fileValidator.js Proof-of-Concepts/File-Parsing/HTML/classCounter.js -o Proof-of-Concepts/File-Parsing/bundle.js",
-    "html-id-analyser": "tsc Proof-of-Concepts/shared/fileValidator.ts && tsc Proof-of-Concepts/File-Parsing/HTML/idAnalyser.ts && browserify Proof-of-Concepts/shared/fileValidator.js Proof-of-Concepts/File-Parsing/HTML/idAnalyser.js -o Proof-of-Concepts/File-Parsing/bundle.js",
-    "html-style-counter": "tsc Proof-of-Concepts/shared/fileValidator.ts && tsc Proof-of-Concepts/File-Parsing/HTML/styleCounter.ts && browserify Proof-of-Concepts/shared/fileValidator.js Proof-of-Concepts/File-Parsing/HTML/styleCounter.js -o Proof-of-Concepts/File-Parsing/bundle.js",
-    "directory-parser": "tsc Proof-of-Concepts/shared/fileValidator.ts && tsc Proof-of-Concepts/Directory-Parsing/directoryParser.ts && browserify Proof-of-Concepts/shared/fileValidator.js Proof-of-Concepts/Directory-Parsing/directoryParser.js -o Proof-of-Concepts/Directory-Parsing/bundle.js"
+    "css-important-counter": "tsc Proof-of-Concepts/shared/fileValidator.ts Proof-of-Concepts/File-Parsing/CSS/importantCounter.ts && browserify Proof-of-Concepts/shared/fileValidator.js Proof-of-Concepts/File-Parsing/CSS/importantCounter.js -o Proof-of-Concepts/File-Parsing/bundle.js",
+    "html-class-counter": "tsc Proof-of-Concepts/shared/fileValidator.ts Proof-of-Concepts/File-Parsing/HTML/classCounter.ts && browserify Proof-of-Concepts/shared/fileValidator.js Proof-of-Concepts/File-Parsing/HTML/classCounter.js -o Proof-of-Concepts/File-Parsing/bundle.js",
+    "html-id-analyser": "tsc Proof-of-Concepts/shared/fileValidator.ts Proof-of-Concepts/File-Parsing/HTML/idAnalyser.ts && browserify Proof-of-Concepts/shared/fileValidator.js Proof-of-Concepts/File-Parsing/HTML/idAnalyser.js -o Proof-of-Concepts/File-Parsing/bundle.js",
+    "html-style-counter": "tsc Proof-of-Concepts/shared/fileValidator.ts Proof-of-Concepts/File-Parsing/HTML/styleCounter.ts && browserify Proof-of-Concepts/shared/fileValidator.js Proof-of-Concepts/File-Parsing/HTML/styleCounter.js -o Proof-of-Concepts/File-Parsing/bundle.js",
+    "directory-parser": "tsc Proof-of-Concepts/shared/fileValidator.ts Proof-of-Concepts/Directory-Parsing/directoryParser.ts && browserify Proof-of-Concepts/shared/fileValidator.js Proof-of-Concepts/Directory-Parsing/directoryParser.js -o Proof-of-Concepts/Directory-Parsing/bundle.js"
   },
   "dependencies": {
     "cssom": "^0.3.6",
