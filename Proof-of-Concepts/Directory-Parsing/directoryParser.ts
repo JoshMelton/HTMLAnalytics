@@ -13,7 +13,22 @@ window.onload = () => {
 };
 
 function parseDirectory(event: any) {
-  Array.from(event.target.files).forEach((file: any) => {
+  Array.from(event.target.files).filter((file: any) => {
+    const fileArray = file.name.split(".");
+    if (validFileTypes(fileArray[fileArray.length - 1])) {
+      return true;
+    }
+    return false;
+  }).forEach((file: any) => {
     console.log(file);
   });
+}
+function validFileTypes(fileExt: string): boolean {
+  if (fileExt === "css" || fileExt === "scss") {
+    return true;
+  } else if (fileExt === "html") {
+    return true;
+  } else {
+    return false;
+  }
 }
