@@ -4,6 +4,7 @@
   "description": "html analytic tools",
   "main": "index.ts",
   "scripts": {
+    "css-selector-map": "tsc Proof-of-Concepts/shared/fileValidator.ts Proof-of-Concepts/File-Parsing/CSS/selectorMap.ts && browserify Proof-of-Concepts/shared/fileValidator.js Proof-of-Concepts/File-Parsing/CSS/selectorMap.js -o Proof-of-Concepts/File-Parsing/bundle.js",
     "css-important-counter": "tsc Proof-of-Concepts/shared/fileValidator.ts Proof-of-Concepts/File-Parsing/CSS/importantCounter.ts && browserify Proof-of-Concepts/shared/fileValidator.js Proof-of-Concepts/File-Parsing/CSS/importantCounter.js -o Proof-of-Concepts/File-Parsing/bundle.js",
     "html-class-counter": "tsc Proof-of-Concepts/shared/fileValidator.ts Proof-of-Concepts/File-Parsing/HTML/classCounter.ts && browserify Proof-of-Concepts/shared/fileValidator.js Proof-of-Concepts/File-Parsing/HTML/classCounter.js -o Proof-of-Concepts/File-Parsing/bundle.js",
     "html-id-analyser": "tsc Proof-of-Concepts/shared/fileValidator.ts Proof-of-Concepts/File-Parsing/HTML/idAnalyser.ts && browserify Proof-of-Concepts/shared/fileValidator.js Proof-of-Concepts/File-Parsing/HTML/idAnalyser.js -o Proof-of-Concepts/File-Parsing/bundle.js",
