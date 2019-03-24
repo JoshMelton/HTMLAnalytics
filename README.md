@@ -16,34 +16,9 @@ Generates various analytic's via Abstract Syntax Tree (AST) exploral of HTML fil
 ### In HTMLAnalytics/Proof of Concepts/File-Parsing
 #### To compile in one step:
 
-`tsc folder/filename.ts && browserify folder/filename.js -o bundle.js`
+`tsc folder1/filename1.ts ... folderN/filenameN.js && browserify folder1/filename1.js ... folderN/filenameN.js -o bundle.js`
 
-where `folder` is the language of analyser you want to build
-
-where `filename` is the analyser you want to build
-
-#### Example's:
- CSS - Important Counter:
- 
-`tsc CSSParsing/importantCounter.ts && browserify CSSParsing/importantCounter.js -o bundle.js`
-
-HTML - Class Counter:
-
-`tsc HTMLParsing/classCounter.ts && browserify HTMLParsing/classCounter.js -o bundle.js`
-
-HTML - Style Counter:
-
-`tsc HTMLParsing/styleCounter.ts && browserify HTMLParsing/styleCounter.js -o bundle.js`
-
-HTML - ID Analyser
-
-`tsc HTMLParsing/idAnalyser.ts && browserify HTMLParsing/idAnalyser.js -o bundle.js`
-
-### In HTMLAnalytics/Proof of Concepts/File-Parsing
-#### To compile in one step:
-Directory Parser
-
-`tsc DirectoryParsing/directoryParser.ts && browserify DirectoryParsing/directoryParser.js -o bundle.js`
+for all nessesary files, it's recommended to use the easy build process!
 
 ## Easy Build Process
 `npm run css-important-counter`
