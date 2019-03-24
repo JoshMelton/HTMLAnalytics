@@ -20,6 +20,8 @@ it is recommended to use the easy build process!
 ## Easy Build Process
 `npm run css-important-counter`
 
+`npm run css-selector-map`
+
 `npm run html-class-counter`
 
 `npm run html-style-counter`
