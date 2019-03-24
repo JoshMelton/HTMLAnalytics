@@ -7,18 +7,15 @@ Generates various analytic's via Abstract Syntax Tree (AST) exploral of HTML fil
 ## First Time Installation:
 `npm install` in `HTMLAnalytics/`
 
-## Manual Individual Build Process: (two step)
-`tsc filename.ts`, converts `filename.ts` => `filename.js`
-
-`browserify input.js -o output.js`, allows us to use node.js required packages client side
-
 ## Manual Individual Build Process:
-### In HTMLAnalytics/Proof of Concepts/File-Parsing
-#### To compile in one step:
+#### To compile in two steps:
+`tsc folder1/filename1.ts ... folderN/filenameN.ts` to compile needed typescript files
 
-`tsc folder1/filename1.ts ... folderN/filenameN.js && browserify folder1/filename1.js ... folderN/filenameN.js -o bundle.js`
+ &&
+ 
+`browserify folder1/filename1.js ... folderN/filenameN.js -o bundle.js` to bundle needed files together / to use npm packages
 
-for all nessesary files, it's recommended to use the easy build process!
+it is recommended to use the easy build process!
 
 ## Easy Build Process
 `npm run css-important-counter`
