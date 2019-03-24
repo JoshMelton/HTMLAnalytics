@@ -28,7 +28,9 @@ function parseFile(event: any) {
 
 function parseFileText(fileText: string) {
   cssParser.parse(fileText).cssRules.filter(filterSelectorText).forEach((element: any) => {
-    const selectors = element.selectorText.split(",").map((selector: string) => selector.replace(/(\s)/gm, ""));
+    const selectors = element.selectorText.split(",").map((selector: string) => {
+      return selector.replace(/(\r\n|\n|\r)/gm, "").trim();
+    });
     console.log(element);
     for (const style of element.style) {
       selectors.forEach((selector: string) => {
